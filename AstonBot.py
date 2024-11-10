@@ -50,7 +50,6 @@ def chatbot_response(user_input):
     elif "remove" in user_input:
         item = user_input[-1]
         return remove_from_cart(item)
-
     elif "total" in user_input:
         return calculate_total()
 
@@ -59,7 +58,6 @@ def chatbot_response(user_input):
             return f"Your cart contains: {', '.join([f'{item}({qty})' for item, qty in cart.items()])}"
         else:
             return "Your cart is empty."
-
     else:
         return "I didn't understand that. You can 'add' or 'remove' items, or ask for the 'total'."
 # Main chat loop
